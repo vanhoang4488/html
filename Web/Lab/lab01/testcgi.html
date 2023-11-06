@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test PHP prog</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript">
+		function validateForm(){
+			var name = document.getElementById('name').value;
+			var birthday = document.getElementById('birthday').value;
+            var xau = document.getElementById('xau').value;
+
+			if(name == ""){
+				alert("Nhập thông tin họ và tên");
+			}
+
+			else if(birthday == ""){
+				alert("Nhập thông tin ngày sinh");
+			}
+            
+            else if(xau == ""){
+            	alert("Nhập xâu kí tự");
+            }
+
+            else{
+            
+            	return true;
+            }
+
+            return false;
+
+		}
+	</script>
+</head>
+<body>
+  <form name="test" method="GET" action="http://demo.com/cgivar.php" onsubmit="return validateForm()">
+  	<label for="name">Họ và tên</label>
+  	<input type="text" name="name" id="name"/>
+  	<br />
+  	<label for="birthday">Ngày sinh</label>
+  	<input type="date" name="birthday" id="birthday"/>
+  	<br />
+  	<label for='xau'>Nhập xâu kí tự: </label>
+  	<input type="text" name="xau" id='xau'/>
+  	<br />
+  	<input type="submit" name="ok" value="OK"/>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đăng nhập</title>
+	<link  rel = "stylesheet"  href = "http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" >
+	<link rel="stylesheet" type="text/css" href="dialog-box.css">
+	<script language="javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+	 <script type="text/javascript">
+        	$(document).ready(function() {
+        $('#node').click(function() {
+
+        //lấy giá trị thuộc tính href - chính là phần tử "#login-box"
+        var loginBox = $(this).attr('href');
+
+        //cho hiện hộp đăng nhập trong 300ms
+        $(loginBox).fadeIn("slow");
+
+        // thêm phần tử id="over" vào sau body
+        $('body').append('<div id="over"></div>');
+        $('#over').fadeIn(300);
+        
+        return false;
+       });
+
+      // khi click đóng hộp thoại
+      $(document).on('click', "a.close, #over", function() { 
+        $('#over, .login-box').fadeOut(300 , function() {
+            $('#over').remove();  
+        }); 
+        return false;
+      });
+	
+      });
+
+      </script>
+</head>
+<body>
+	<a href="#login-box" class="login-window button" id="node">Đăng nhập</a>
+        <div id="login-box" class="login-box">
+	    <div class="box">
+		<div class="panel-heading"><h3 class="panel-title">Đăng nhập</h3></div>
+		<div class="panel-body">
+
+			<!--Chứa khu vực đăng nhập bằng tài khoản google-->
+			<div class="social-login">
+				<a class="social-login-a">
+					<div class="icon-contain-login">
+						<span class="fa fa-google mobile-icon"></span>
+					</div>
+					<div class="login-text">ĐĂNG NHẬP BẰNG GOOGLE</div>
+				</a>	
+			</div>
+
+			<!--Chứa khu vực đăng nhập bằng tài khoản facebook-->
+			<div class="social-login" style="margin-top: 10px;">
+				<a class="social-login-a" style="background-color: #4066b0;">
+					<div class="icon-contain-login" style="background-color: #3a5a98;">
+						<span class="fa fa-facebook mobile-icon"></span>
+					</div>
+					<div class="login-text">ĐĂNG NHẬP BẰNG FACEBOOK</div>
+				</a>
+			</div>
+
+			<!--Hoặc đăng nhập bằng email-->
+			<div class="login-line-other">
+			    <span>hoặc bằng email</span>	
+			</div>
+
+			<!--form đăng nhập -->
+			<div class="panel-body-form-login">
+				<form class="form-login">
+					<div class="form-group">
+					    <div class="form-group-information">
+					    	<i class="fa fa-user"></i>
+					        <input class="form-control" type="text" name="user" placeholder="Tên đăng nhập hoặc email">
+					    </div>	
+					</div>
+
+					<div class="form-group">
+					   <div class="form-group-information">
+					    	<i class="fa fa-lock"></i>
+					        <input class="form-control" type="password" name="password" placeholder="Mật khẩu">
+					    </div>	
+					</div>
+
+					<div class="form-group">
+					   <div style="display: flex; align-items: center;">
+					   	  <input style="width: 18px; height: 18px;" type="checkbox" id="rememberMe" name="rememberMe" checked="checked">
+					      <label for="rememberMe" style="font-size: 15px;">lưu mật khẩu</label>
+					      <span style="padding-left: 120px;"><a href="#" class="link">Quên mật khẩu?</a></span>
+					   </div>
+					</div>
+
+					<div class="form-group">
+					   <input class="form-group-bt_submit" type="submit" name="bt_submit" value="Đăng nhập">	
+					</div>				
+				</form>	
+			</div>
+
+			<!--Đăng kí tài khoản -->
+			<div class="panel-body-register">
+				<p>Chưa có tài khoản? <a href="#" class="link">Đăng kí</a> </p>
+			</div>
+		</div>
+	</div>
+    </div>
+</body>
+</html>

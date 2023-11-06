@@ -1,0 +1,156 @@
+<html>
+<head>
+<title>Đăng nhập</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style>
+
+body
+{
+    margin: 6% auto;
+	padding: 0;
+	width: 400px;
+	height: 500px;
+}
+
+.wrap
+{
+    width: 400px;
+	height: 500px;
+	border: 1px solid #AAA;
+	border-radius: 10px;
+    background-image: url("../demo/nen.jpg");
+}
+
+#header
+{
+    width: 400px;
+	height: 35%;
+}
+
+#main
+{
+    width: 400px;
+	height: 45%;
+	margin-top: 20px;
+}
+
+#footer
+{    
+    width: 400px;
+	height: 20%;
+}
+
+h1 {
+   
+   background-image: -webkit-linear-gradient(left, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);
+   background-image: -moz-linear-gradient(left, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);
+   background-image: -ms-linear-gradient(left, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);
+   background-image:-o-linear-gradient(left, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);
+   background-image:linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);
+   color: rgba(255, 255, 255, 0.1);
+   font-size: 40px;
+   font-weight: bolder;    
+   position: relative;
+   -webkit-animation: shine 150s infinite alternate;
+   -webkit-background-clip: text;
+   background-size:50px;
+}
+
+@keyframes shine {
+    0% {
+        background-position: top left;
+    }
+    100% {
+        background-position: top right;
+    }
+}
+
+._user
+{
+   width: 350px;
+   height: 50px;
+   margin: 18px 25px;
+   border: 1px solid blue;
+   border-radius: 5px;
+   background-color: #F5F5DC;
+   font-size: 20px;
+   padding-left: 15px;
+}
+
+._text
+{
+    margin-left: 34px;
+    margin-top: 10px;
+	background-color: white;
+	font-size: 14px;
+	color: blue;
+	position: absolute;
+	z-index: 0;
+	padding: 0px 4px;
+}
+
+#fg_mk
+{
+    margin-left: 27px;
+	font-weight: bold;
+	color: yellow;
+}
+
+#cr_tk
+{
+   margin-left: 27px;
+   font-weight: bold;
+   color: yellow;
+}
+
+#knot_login
+{
+    float: right;
+    margin-right: 30px;
+	margin-top: -12px;
+    border: 3px solid #DAA520;
+	border-radius: 5px;
+	background-color: #DAA520;
+	color: #000000;
+	font-weight: bold;
+	font-size: 19px;
+}
+
+</style>
+
+</head>
+
+<body>
+    
+	<div class='wrap'>
+	     
+		 <div id='header' align='center' valign='center'>
+		    <img src="D:\Ảnh\login.jpg" alt="login" width='100px' height='100px' style="border-radius: 50%; margin-top: 10px;"/>           			
+			<h1 style="margin-top: 1px; font-family: Comic Sans MS, cursive, sans-serif; color: ">Đăng nhập</h1> 
+		 </div>
+	     
+		 <div id='main'>
+		 
+		    <form>
+			  <p class='_text'>Email hoặc số điện thoại</p>
+              <input class='_user' name='user' type='text' value=''/> 
+              <p class='_text'>Nhập mật khẩu của bạn</p>
+              <input class='_user' name='password' type='password' value=''/>  	
+              <a href="" id='fg_mk'>Quên mật khẩu?</a> <br />	  
+            </form>
+			
+		 </div>
+		 
+		 <div id='footer'>
+		    
+			<form>
+			  <a href="" id='cr_tk'>Tạo tài khoản</a>
+              <input id='knot_login' name='knot_login' type='submit' value='Đăng nhập'/>		
+			</form>
+			
+		 </div>
+	
+	</div>
+</body>
+
+</html>

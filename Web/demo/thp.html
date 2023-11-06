@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thêm học phần</title>
+
+	<style type="text/css">
+		
+		body
+		{
+			margin-left: 10px;
+			width: 500px;
+			height: 500px;
+			font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+            color: black;
+		}
+
+		.container
+		{
+			width: 80%;
+			max-width: 1200px;
+			
+		}
+
+		.container > *
+		{
+			box-sizing: border-box;
+		}
+
+		.flex-outer, .flex-inner
+		{
+			list-style-type: none;
+			padding: 0;
+		}
+
+		.flex-outer
+		{
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		.flex-outer > li, .flex-inner
+		{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		.flex-inner
+		{
+			align-items: stretch;
+		}
+
+		.flex-outer > li > label, .flex-outer > li > span
+		{
+			flex: 1 0 120px;
+			max-width: 220px;
+		}
+
+		.flex-outer > li > label + *,.flex-outer > li > span + *, .flex-inner
+		{
+			flex: 1 0 220px;
+		}
+
+		.flex-inner
+		{
+			margin-top: 10px;
+			width: 100px;
+			justify-content: space-between;
+			flex-direction: column;
+		}
+
+		#add
+		{
+			margin-top: 10px;
+			padding: 8px 16px;
+            border: none;
+            background: #333;
+            color: #f2f2f2;
+            text-transform: uppercase;
+            letter-spacing: .09em;
+            border-radius: 2px;
+		}
+
+		#gc
+		{
+			padding: 2px;
+
+		}
+	</style>
+
+</head>
+
+<body>
+	<div>
+		<div id="header">
+			<h1>Thêm học phần</h1>
+
+		</div>
+
+		<div class="container">
+			<fieldset>
+				<legend>thêm học phần</legend>
+				<form>
+					<ul class="flex-outer">
+						<li>
+							<label for="hp">Học phần</label>
+							<input type="text" name="hp" id="hp" />
+						</li>
+						<li>
+							<label for="tmh">Tên môn học</label>
+							<input type="text" name="tmh" id="tmh"/>
+						</li>
+						<li>
+							<label for="mmh">Mã môn học</label>
+							<input type="text" name="mmh" id="mmh"/>
+						</li>
+						<li>
+							<span>Giáo viên</span>
+							<select name="gv">
+								<option value="0" selected>Nguyễn Văn A</option>
+								<option value="1">Nguyễn Văn B</option>
+							</select>
+						</li>
+						<li>
+							<span>Học kì</span>
+							<select name="hk">
+								<option value="0" selected>học kì I 2019-2020</option>
+								<option value="1">học kì II 2019-2020</option>
+							</select>
+						</li>
+						<li>
+							<span>Ngày bắt đầu</span>
+							<input type="date" name="nbd"/>
+						</li>
+						<li>
+							<span>Ngày kết thúc</span>
+							<input type="date" name="nkt"/>
+						</li>
+						<li>
+							<ul class="flex-inner">
+								<li>
+									<input type="radio" name="grad" id="lopclc123" checked />
+									<label for="lopclc123">LopCLC123</label>
+								</li>
+								<li>
+									<input type="radio" name="grad" id="lhc"/>
+									<label for="lhc">Lớp hệ chuẩn</label>
+								</li>
+
+							</ul>
+						</li>
+						<li>
+							<textarea rows="8" cols="48"name="gc" id="gc" style="resize: none;" placeholder="Ghi chú"></textarea>						
+						</li>
+						<li>
+							<input type="submit" id="add" name="add" value="thêm"/>
+						</li>
+
+					</ul>
+
+                
+				</form>
+
+			</fieldset>
+
+		</div>
+		
+		<div id="footer">
+			
+		</div>	
+
+	</div>
+
+</body>
+
+</html>

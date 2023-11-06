@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tạo tài khoản</title>
+	<style type="text/css">
+		body
+		{
+              margin: 3% auto;
+              width: 450px;
+              height: 550px;
+              border: 1px solid black;
+        	  border-radius: 10px;
+		}
+        
+        .wrap
+        { 
+        	width: 450px;
+        	height: 550px;
+        	background-color: rgb(0, 245, 255);
+        	border-radius: 10px;
+        }
+
+        .flex-outer, .flex-inner
+        {
+           list-style-type: none;  
+           padding: 0px 10px; 
+        }
+
+        .flex-outer > li, 
+        .flex-inner{
+             display: flex;   
+             flex-wrap: wrap;
+             align-items: center;
+             font-size: 20px;
+        }
+
+        .flex-outer > li > label,
+        .flex-outer > li > span{
+             flex: 1 0 120px;
+             max-width: 220px;
+             padding-left: 10px;
+             padding-top: 5px;
+             padding-bottom: 5px;
+             font-weight: 300;
+        }
+
+        .flex-outer > li > label + *, .flex-outer > li > span + *,
+        .flex-inner{
+        	flex: 1 0 220px;
+        	box-sizing: border-box;
+        	height: 25px;
+        }
+
+
+        .flex-inner
+        {
+            justify-content: space-between;
+              
+        }
+
+        .node
+        {
+        	margin-left: 2px;
+            margin-top: 10px;
+			padding: 8px 16px;
+            border: none;
+            background: #333;
+            color: #f2f2f2;
+            text-transform: uppercase;
+            letter-spacing: .09em;
+            border-radius: 2px;
+        }
+
+	</style>
+
+</head>
+
+<body>
+    <div class="wrap">
+    	<div class="header" style="padding: 0 5px;">
+            <h2 style="margin: 0px; margin-bottom: 10px; text-align: center; padding-top: 20px; text-transform: capitalize; letter-spacing: .03em;">Đăng kí tài khoản người dùng</h2>
+            <span style="color: red;">Chú ý: Bạn phải nhập đủ các trường có dấu*</span>
+            <hr/>
+    	</div>
+
+    	<div class="container">
+    		<form>
+    		<ul class="flex-outer">
+    			<li style="margin-bottom: 7px;"><b>Thông tin tài khoản</b> </li>
+    			<li>
+    				<label for="user">Tên đăng nhập*</label>
+    				<input type="text" name="user" id="user"/>
+    			</li>
+    			<li>
+    				<label for="password">Mật khẩu*</label>
+    				<input type="password" name="password" id="password"/>
+    			</li>
+    			<li>
+    				<label for="a_password">Nhập lại mật khẩu*</label>
+    				<input type="password" name="a_password" id="a_password"/>
+    			</li>
+
+    			<li style="margin: 7px 0px"><b>Thông tin cá nhân</b> </li>
+    			<li>
+    				<label for="ht">Họ và tên*</label>
+    				<input type="text" name="ht" id="ht"/>
+    			</li>
+    			<li>
+    				<label for="birthday">Ngày sinh*</label>
+    				<input type="date" name="birthday" id="birthday" />
+    			</li>
+    			<li>
+    				<span>Giới tính*</span>
+    				<ul class="flex-inner">
+    					<li>
+    						<input type="radio" name="gt" id="nam"/>
+    						<label for="nam">Nam</label>
+    					</li>
+    					<li>
+    						<input type="radio" name="gt" id="nu"/>
+    						<label for="nu">Nữ</label>
+    					</li>
+    				</ul>
+    			</li>
+    			<li>
+    				<label for="email">Email*</label>
+    				<input type="email" name="email" id="email"/>
+    			</li>
+    			<li>
+    				<span>Khoa</span>
+    				<select name="khoa">
+    					<option value="0">Công nghệ thông tin</option>
+    					<option value="1">Khoa học máy tính</option>
+    				</select>
+    			</li>
+    			<li>
+    				<label for="phone">SĐT</label>
+    				<input type="text" name="phone" id="phone"/>
+    			</li>
+    			<li style="justify-content: space-between; margin-top: 10px">
+    				<input type="submit" name="add" class="node" value="Đăng kí" />
+    				<input type="reset" name="huy" class="node" value="Hủy"/>
+    			</li>
+    		</ul>
+    		</form>
+    	</div>
+
+    	<div class="footer"></div>
+
+    </div>
+
+</body>
+</html>

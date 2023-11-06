@@ -1,0 +1,25 @@
+<!--
+   dữ liệu ở đây được xử lí nhờ /action_page.php nhưng đây là coppy là ở trên mạng lên k có phần xử lí
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname" required>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
